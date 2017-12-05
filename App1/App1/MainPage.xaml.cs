@@ -12,21 +12,11 @@ namespace App1
         public MainPage()
         {
             InitializeComponent();
-
         }
 
-        void OnSliderValueChanged(object sender,
-                                  ValueChangedEventArgs args)
-        { 
-            valueLabel.Text = ((Slider)sender).Value.ToString("F3");
-        }
-
-        async void OnButtonClicked(object sender, EventArgs args)
+        void OnFirstButtonXaml(object sender, EventArgs args)
         {
-            Button button = (Button)sender;
-            await DisplayAlert("Clicked!",
-                "The button labeled '" + button.Text + "' has been clicked",
-                "OK");
+            Navigation.PushModalAsync(new View.HOL1Page());
         }
 
     }
