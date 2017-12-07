@@ -19,5 +19,10 @@ namespace App1
             Navigation.PushModalAsync(new View.HOL1Page());
         }
 
+        void OnHOL1AButtonXaml(object sender, EventArgs args)
+        {
+            Navigation.PushModalAsync(new View.HOL1APage());
+        }
+
     }
 }
